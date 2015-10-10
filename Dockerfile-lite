@@ -1,0 +1,13 @@
+FROM resin/rpi-raspbian
+
+COPY influxdb_0.9.4_armv6l.tgz /tmp/influxdb_0.9.4_armv6l.tgz
+RUN mkdir /opt/influxdb \
+	&& cd /opt/influxdb \
+	&& tar zxf /tmp/influxdb_0.9.4_armv6l.tgz
+COPY influxdb.conf /opt/influxdb/influxdb.conf
+
+EXPOSE 8083 8086 8088
+
+WORKDIR /opt/influxdb
+CMD ["-config","influxdb.conf"]
+ENTRYPOINT ["./influxd"]
