@@ -10,3 +10,4 @@ Container is not intended to external publish its ports. If you want to connect 
 ```
 docker run --detach=true --name grafana --publish=3000 --link influxdb:influxdb grafana
 ```
+Before sending data to Influxdb, please create a database. Dockerfile doesn't create one.
