@@ -1,7 +1,7 @@
 # rpi-influxdb
 Dockerfile to build and run Influxdb on a Raspberry Pi. It has been tested on Influxdb 0.9.4 and a armv6l chip (rpi A+/B+).
 
-# Usage
+## Usage
 ```
 docker build --tag="influxdb" .
 docker run --detach=true --name influxdb influxdb
