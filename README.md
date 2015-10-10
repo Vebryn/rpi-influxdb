@@ -15,3 +15,8 @@ Before sending data to Influxdb, please create a database. Dockerfile doesn't cr
 ## Lite version
 Lite version uses a compiled Influxdb archive. If you don't have one, please compile it using default Dockerfile. To extract binaries, use Docker exec option to tar files from /opt/influxdb.
 Lite version has a smaller size and require less time to build.
+
+To build lite version, specify Dockerfile name to Docker
+```
+docker build -f Dockerfile-lite .
+```
