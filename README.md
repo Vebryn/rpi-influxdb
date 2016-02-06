@@ -4,9 +4,12 @@
 Dockerfile build Influxdb binaries. Dockerfile-lite untar Influxdb binaries.
 
 ## Build influxdb
-* Build Docker image, influxdb binaries will be build in this step
+Build Docker image, influxdb binaries will be build in this step
+    
     docker build --tag="influxdb" .
-* Start container, bash interpreter will be started, container mnt dir will be bind to host mnt dir
+
+Start container, bash interpreter will be started, container mnt dir will be bind to host mnt dir
+
     docker run --rm --tty --interactive --name influxdb --volume /mnt:/mnt influxdb bash
 
 You can copy generated binaries into /mnt, files will be available on host mnt dir.
