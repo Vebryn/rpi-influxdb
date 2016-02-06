@@ -19,8 +19,11 @@ Lite version uses a compiled Influxdb archive. If you don't have one, please com
 Lite version has a smaller size and require less time to build.
 
 To build lite version, specify Dockerfile name to Docker
+
     docker build -f Dockerfile-lite .
 
 Container is not intended to external publish its ports. If you want to connect to influxdb container, please use linking.
+
     docker run --detach=true --name grafana --publish=3000 --link influxdb:influxdb grafana
+
 Before sending data to Influxdb, please create a database. Dockerfile doesn't create one.
