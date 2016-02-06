@@ -15,8 +15,7 @@ Start container, bash interpreter will be started, container mnt dir will be bin
 You can copy generated binaries into /mnt, files will be available on host mnt dir.
 
 ## Run influxdb / Lite version
-Lite version uses a compiled Influxdb archive. If you don't have one, please compile it using default Dockerfile. To extract binaries, use Docker exec option to tar files from /opt/influxdb.
-Lite version has a smaller size and require less time to build.
+Lite version uses a compiled Influxdb archive. If you don't have one, please compile it using default Dockerfile and extract binaries. Lite version has a smaller size and require less time to build.
 
 To build lite version, specify Dockerfile name to Docker
 
